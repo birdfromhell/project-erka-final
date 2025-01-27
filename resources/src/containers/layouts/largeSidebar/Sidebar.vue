@@ -140,31 +140,6 @@
             </router-link>
           </li>
 
-            <li
-            v-show="currentUserPermissions && (currentUserPermissions.includes('company')
-                     || currentUserPermissions.includes('department')
-                     || currentUserPermissions.includes('designation')
-                     || currentUserPermissions.includes('office_shift')
-                     || currentUserPermissions.includes('view_employee')
-                     || currentUserPermissions.includes('attendance')
-                     || currentUserPermissions.includes('leave')
-                     || currentUserPermissions.includes('holiday')
-                     || currentUserPermissions.includes('payroll')
-                     )"
-                     
-            @mouseenter="toggleSubMenu"
-            :class="{ active: selectedParentMenu == 'hrm' }"
-            class="nav-item"
-            data-item="hrm"
-            :data-submenu="true"
-          >
-            <a class="nav-item-hold" href="#">
-              <i class="nav-icon i-Library"></i>
-              <span class="nav-text">{{$t('hrm')}}</span>
-            </a>
-            <div class="triangle"></div>
-          </li>
-
            <li
             v-show="currentUserPermissions && (currentUserPermissions.includes('transfer_view')
                      || currentUserPermissions.includes('transfer_add'))"
